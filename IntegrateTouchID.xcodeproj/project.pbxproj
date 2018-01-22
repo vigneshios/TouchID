@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		1823EB842015C50B0005A17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823EB832015C50B0005A17C /* AppDelegate.swift */; };
-		1823EB862015C50B0005A17C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823EB852015C50B0005A17C /* ViewController.swift */; };
+		1823EB862015C50B0005A17C /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823EB852015C50B0005A17C /* AuthenticationVC.swift */; };
 		1823EB892015C50B0005A17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1823EB872015C50B0005A17C /* Main.storyboard */; };
 		1823EB8B2015C50B0005A17C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1823EB8A2015C50B0005A17C /* Assets.xcassets */; };
 		1823EB8E2015C50B0005A17C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1823EB8C2015C50B0005A17C /* LaunchScreen.storyboard */; };
+		18F08E102015E06E003DAA88 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F08E0F2015E06E003DAA88 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		18F08E122015E08E003DAA88 /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F08E112015E08E003DAA88 /* SuccessVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1823EB802015C50B0005A17C /* IntegrateTouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrateTouchID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1823EB832015C50B0005A17C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1823EB852015C50B0005A17C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1823EB852015C50B0005A17C /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		1823EB882015C50B0005A17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1823EB8A2015C50B0005A17C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1823EB8D2015C50B0005A17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1823EB8F2015C50B0005A17C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F08E0F2015E06E003DAA88 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		18F08E112015E08E003DAA88 /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F08E102015E06E003DAA88 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				1823EB822015C50B0005A17C /* IntegrateTouchID */,
 				1823EB812015C50B0005A17C /* Products */,
+				18F08E0E2015E06D003DAA88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +61,46 @@
 			isa = PBXGroup;
 			children = (
 				1823EB832015C50B0005A17C /* AppDelegate.swift */,
-				1823EB852015C50B0005A17C /* ViewController.swift */,
+				1823EB972015C5320005A17C /* Model */,
+				1823EB962015C52B0005A17C /* View */,
+				1823EB952015C51E0005A17C /* Controllers */,
 				1823EB872015C50B0005A17C /* Main.storyboard */,
 				1823EB8A2015C50B0005A17C /* Assets.xcassets */,
 				1823EB8C2015C50B0005A17C /* LaunchScreen.storyboard */,
 				1823EB8F2015C50B0005A17C /* Info.plist */,
 			);
 			path = IntegrateTouchID;
+			sourceTree = "<group>";
+		};
+		1823EB952015C51E0005A17C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1823EB852015C50B0005A17C /* AuthenticationVC.swift */,
+				18F08E112015E08E003DAA88 /* SuccessVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1823EB962015C52B0005A17C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1823EB972015C5320005A17C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18F08E0E2015E06D003DAA88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18F08E0F2015E06E003DAA88 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1823EB862015C50B0005A17C /* ViewController.swift in Sources */,
+				1823EB862015C50B0005A17C /* AuthenticationVC.swift in Sources */,
+				18F08E122015E08E003DAA88 /* SuccessVC.swift in Sources */,
 				1823EB842015C50B0005A17C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
